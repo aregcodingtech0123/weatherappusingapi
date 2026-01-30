@@ -100,7 +100,7 @@ export const useWeather = (
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, [latitude, longitude]);
 
   return { weatherData, loading, error, refetch: fetchData };
 };
