@@ -100,6 +100,7 @@ export const useWeather = (
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latitude, longitude]);
 
   return { weatherData, loading, error, refetch: fetchData };

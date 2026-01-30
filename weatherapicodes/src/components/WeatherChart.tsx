@@ -37,7 +37,7 @@ export const WeatherChart: React.FC<WeatherChartProps> = ({ data, limit = 24 }) 
         Temperature Trend
       </h3>
 
-      <div className="h-[250px] w-full">
+      <div className="h-[250px] w-full min-w-[200px]">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={chartData}
