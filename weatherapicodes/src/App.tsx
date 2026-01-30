@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { SearchBar } from './components/SearchBar';
 import { CurrentWeatherComponent } from './components/CurrentWeather';
 import { HourlyForecast } from './components/HourlyForecast';
