@@ -97,7 +97,7 @@ export const HourlyForecast: React.FC<HourlyForecastProps> = ({ data, limit = 24
               </span>
             </motion.div>
           );
-        })})
+        })}
       </div>
     </GlassCard>
   );
