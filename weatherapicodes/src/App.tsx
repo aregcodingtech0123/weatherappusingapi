@@ -32,7 +32,7 @@ function App() {
       return getWeatherCondition(weatherData.current.weatherCode, isNightTime());
     }
     return isNightTime() ? 'night' : 'sunny';
-  }, [weatherData]);
+  }, [weatherData?.current]);
 
   const theme = weatherThemes[getCondition()];
 
