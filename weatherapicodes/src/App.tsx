@@ -27,12 +27,14 @@ function App() {
   const { favorites, addFavorite, removeFavorite, isFavorite } = useFavorites();
 
   // Get weather condition for dynamic background
+  const isNight = useMemo(() => isNightTime(), []);
+  
   const getCondition = useCallback((): WeatherCondition => {
     if (weatherData?.current) {
-      return getWeatherCondition(weatherData.current.weatherCode, isNightTime());
+      return getWeatherCondition(weatherData.current.weatherCode, isNight);
     }
-    return isNightTime() ? 'night' : 'sunny';
-  }, [weatherData?.current]);
+    return isNight ? 'night' : 'sunny';
+  }, [weatherData?.current, isNight]);
 
   const theme = weatherThemes[getCondition()];
 
